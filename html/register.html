@@ -1,0 +1,85 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | TurnItGreen</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-header">
+            <h1>Create Your Account</h1>
+            <p>Join our sustainable community today</p>
+        </div>
+        
+         <form id="registerForm" class="register-form"> 
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required="">
+                <span class="error-message" id="firstNameError"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required="">
+                <span class="error-message" id="lastNameError"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required="">
+                <span class="error-message" id="emailError"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required="">
+                <div class="password-strength">
+                    <span class="strength-bar"></span>
+                    <span class="strength-bar"></span>
+                    <span class="strength-bar"></span>
+                    <span class="strength-text" id="passwordStrength">Weak</span>
+                </div>
+                <span class="error-message" id="passwordError"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required="">
+                <span class="error-message" id="confirmPasswordError"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number (Optional)</label>
+                <input type="tel" id="phone" name="phone">
+                <span class="error-message" id="phoneError"></span>
+            </div>
+            
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required="">
+                <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                <span class="error-message" id="termsError"></span>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="register-btn">Create Account</button>
+            </div>
+            
+            <div class="login-link">
+                Already have an account? <a href="login.html">Sign in</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Success Popup -->
+    <div id="successPopup" class="success-popup">
+        <div class="popup-content">
+            <h3>Registration Successful!</h3>
+            <p>Welcome to TurnItGreen, <span id="popupName"></span>!</p>
+            <p>Your account has been created with email: <span id="popupEmail"></span></p>
+            <p>Registration date: <span id="popupDate"></span></p>
+            <button id="continueBtn" class="continue-btn">Continue to Site</button>
+        </div>
+    </div>
+
+    <script src="/js/register.js"></script>
+</body></html>

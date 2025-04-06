@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TurnItGreen - Recycle & Refurbish Marketplace</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .hero {
+            background: url('/image/image1.png') no-repeat center center/cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+           <img src="/image/logo.jpg" alt="" height="50px"> <h1>TurnItGreen</h1>
+           <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#Why Recycle E-Waste?">Why Recycle E-Waste?</a></li>
+                    <li><a href="#how">How it work?</a></li>
+                    <li><a href="#marketplace">Marketplace</a></li>
+                    <li><a href="#impact">Our Impact</a></li>
+                    <li><a href="adminlogin.html">Admin</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button id="login-btn"><a href="login.html">Login</a></button>
+                <button id="register-btn"><a href="register.html">Register</a></button>
+            </div>
+        </div>
+    </header>
+   <section id="home">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>TURN YOUR WASTE INTO WEALTH!!</h1>
+            <p>Welcome to TurnItGreen where sustainability meets innovation. Sell your old electronics or find quality refurbished devices at TurnItGreen. We make e-waste recycling simple, profitable, and environmentally friendly.</p>
+            <div class="cta-buttons">
+                <button id="post-need-btn">Post Your Need</button>
+                <button id="sell-item-btn">List an Item</button>
+            </div>
+        </div>
+    </section></section>
+   <section id="Why Recycle E-Waste?">
+    <section class="why-recycle">
+        <div class="container">
+            <h2 class="section-title">Why Recycle E-Waste?</h2>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-icon">♻</div>
+                    <h3>Environmental Protection</h3>
+                    <ul>
+                        <li>E-waste contains toxins like lead,mercury that can pollute soil and water if not disposed of properly.</li>
+                        <li class="highlight">Reduces greenhouse gas emissions by 70% compared to mining new materials</li>
+                        <li>Conserves natural resources and reduces mining needs</li>
+                        <li>Decreases landfill waste (e-waste is growing 3× faster than other waste)</li>
+                    </ul>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">🏥</div>
+                    <h3>Health Benefits</h3>
+                    <ul>
+                        <li>Reduces exposure to hazardous materials like lead and mercury</li>
+                        <li class="highlight">Prevents respiratory diseases from burning e-waste</li>
+                        <li>Protects water sources from contamination</li>
+                        <li>Safeguards workers from unsafe recycling practices</li>
+                    </ul>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">💰</div>
+                    <h3>Economic Value</h3>
+                    <ul>
+                        <li>Recovers valuable metals worth billions annually</li>
+                        <li class="highlight">Creates 10× more jobs than landfilling or incineration</li>
+                        <li>Reduces manufacturing costs through material recovery</li>
+                        <li>Supports a circular economy and sustainable development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section></section>
+<section id="how">
+  <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title" text-align="centre" >How to upload your device?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>List Your Items</h3>
+                    <p>Tell us what electronics you want to sell by filling our simple form.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Upload images</h3>
+                    <p>Upload images of your product from required angle.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get it verified</h3>
+                    <p>Get it verified and then your device will be uploaded on our services section.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Get Paid</h3>
+                    <p>Sell your product to an interested user and get paid.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+        <main class="container">
+        <section id="marketplace">
+            <h2 style="font-size:2.1em;">Available Refurbished Products</h2>
+            <div class="filters">
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="laptops">Laptops</option>
+                    <option value="phones">Phones</option>
+                    <option value="tablets">Tablets</option>
+                    <option value="components">Components</option>
+                </select>
+                <select id="condition-filter">
+                    <option value="all">All Conditions</option>
+                    <option value="new">New</option>
+                    <option value="refurbished">Refurbished</option>
+                    <option value="used">Used</option>
+                    <option value="for-parts">For Parts</option>
+                </select>
+            </div>
+            <div class="products-grid" id="products-container">
+                <!-- Products loaded by JS -->
+            </div>
+        </section>
+
+        <section id="needs-board">
+            <h2 style="font-size:2.1em;">Current Needs</h2>
+            <div class="needs-list" id="needs-container">
+                <!-- Needs loaded by JS -->
+            </div>
+        </section>
+
+        <section id="post-form" class="form-modal">
+            <div class="form-content">
+                <span class="close-form">&times;</span>
+                <h2 id="form-title">Post Your Need</h2>
+                <form id="need-form">
+                    <div class="form-group">
+                        <label for="need-title">Title</label>
+                        <input type="text" id="need-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="need-category">Category</label>
+                        <select id="need-category" required>
+                            <option value="">Select Category</option>
+                            <option value="laptops">Laptop</option>
+                            <option value="phones">Phone</option>
+                            <option value="tablets">Tablet</option>
+                            <option value="components">Component</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="need-description">Description</label>
+                        <textarea id="need-description" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="need-budget">Budget (optional)</label>
+                        <input type="number" id="need-budget" min="0">
+                    </div>
+                    <button type="submit">Submit Need</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="seller-form" class="form-modal">
+            <div class="form-content">
+                <span class="close-form">&times;</span>
+                <h2>List an Item for Sale</h2>
+                <form id="seller-form">
+                    <div class="form-group">
+                        <label for="product-name">Product Name</label>
+                        <input type="text" id="product-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-category">Category</label>
+                        <select id="product-category" required>
+                            <option value="">Select Category</option>
+                            <option value="laptops">Laptop</option>
+                            <option value="phones">Phone</option>
+                            <option value="tablets">Tablet</option>
+                            <option value="components">Component</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-condition">Condition</label>
+                        <select id="product-condition" required>
+                            <option value="refurbished">Refurbished</option>
+                            <option value="used">Used - Good</option>
+                            <option value="used-fair">Used - Fair</option>
+                            <option value="for-parts">For Parts/Repair</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description">Description</label>
+                        <textarea id="product-description" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price">Price </label>
+                        <input type="number" id="product-price" min="0" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-images">Upload Images (max 3)</label>
+                        <input type="file" id="product-images" accept="image/*" multiple>
+                    </div>
+                    <button type="submit">List Product</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="impact">
+            <h2>Our Collective Impact</h2>
+            <div class="impact-stats">
+                <div class="stat">
+                    <span id="devices-rescued">0</span>
+                    <p>Devices Rescued</p>
+                </div>
+                <div class="stat">
+                    <span id="ewaste-diverted">0</span>
+                    <p>kg E-Waste Diverted</p>
+                </div>
+                <div class="stat">
+                    <span id="transactions">0</span>
+                    <p>Successful Matches</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Buyers</h3>
+                    <ul>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Browse Needs</a></li>
+                        <li><a href="#">Quality Standards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Sellers</h3>
+                    <ul>
+                        <li><a href="#">Seller Guidelines</a></li>
+                        <li><a href="#">Refurbishment Standards</a></li>
+                        <li><a href="#">Shipping Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Recycling</h3>
+                    <ul>
+                        <li><a href="#">Drop-off Locations</a></li>
+                        <li><a href="#">Mail-in Program</a></li>
+                        <li><a href="#">Data Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 TurnItGreen. Promoting a circular economy for electronics.</p>
+                <p>Certified Responsible Recycler | Partnered with <span id="partner-count">12</span> refurbishment centers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
